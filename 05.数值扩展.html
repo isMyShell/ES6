@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>数值扩展</title>
+</head>
+<body>
+	<script type="text/javascript">
+		{
+			//1新增方法
+			//2方法调整
+		}
+
+		{
+			console.log('b',0b01111)
+			console.log('B',0B01111)
+			console.log(0o01111)
+		}
+
+		{
+			console.log('15',Number.isFinite(15))
+			console.log('NaN',Number.isFinite(NaN))
+			console.log('1/0',Number.isFinite(1/0))
+
+			console.log('NaN',Number.isNaN(NaN))
+			console.log('0',Number.isNaN(0))
+		}
+
+		{
+			//判断是不是整数
+			console.log('25',Number.isInteger(25))
+			console.log('25.0',Number.isInteger(25.0))
+
+			console.log(25.0 === 25)//true
+			console.log('25.1',Number.isInteger(25.1))
+			console.log('25',Number.isInteger('25'))//false
+		}
+
+		{
+			//(-2)^53 --- 2^53
+			console.log(Number.MAX_SAFE_INTEGER,Number.MIN_SAFE_INTEGER)//最大 最小数
+
+			console.log('10',Number.isSafeInteger(10))
+			console.log('a',Number.isSafeInteger("a"))
+		}
+
+
+		{
+			//Math.floor
+			//去整数部分
+			console.log('4.2',Math.trunc(4.2))
+			console.log('4.9',Math.trunc(4.9))
+			console.log('-4.9',Math.trunc(-4.9))
+		}
+
+		{
+			console.log('-5',Math.sign(-5))
+			console.log('0',Math.sign(0))
+			console.log('-0',Math.sign(-0))
+			console.log('+0',Math.sign(+0))
+			console.log('5',Math.sign(5))
+			console.log('50',Math.sign('50'))
+			console.log('foo',Math.sign('foo'))
+		}
+
+		{
+			console.log('8',Math.cbrt(8))
+		}
+
+		{
+			//三角函数
+			//对数的方法
+		}
+	</script>
+</body>
+</html>

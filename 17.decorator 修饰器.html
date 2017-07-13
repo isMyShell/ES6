@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>decorator</title>
+</head>
+<body>
+	<script>
+		{
+			let readonly = function(target,name,descriptor){
+				descriptor.writable = false
+				return descriptor
+			}
+
+			class Test {
+				@readonly
+				time(){
+					return '2017-07-13'
+				}
+			}
+
+			let test = new Test()
+
+			test.time = function(){
+				console.log('reset time')
+			}
+			console.log(test.time)
+		}
+
+		{
+			let typename = function(target,name,descriptor){
+				target.myname = 'hello'
+			}
+
+			@typename
+			class Test {
+				constructor() {
+
+				}
+			}
+
+			console.log('类修饰',Test.myname)
+
+			//第三方库 core-descorators ;
+		}
+	</script>
+</body>
+</html>
